@@ -55,9 +55,9 @@ class Connection {
    * @param {string} dbName
    */
   mongoConnection(
-    name: string = "typeScript",
-    port: number = 27017,
-    host: string = "localhost"
+    name: string,
+    port: number,
+    host: string
   ): void {
     mongoose.connect(
       `mongodb://${host}:${port}/${name}`,
@@ -69,9 +69,9 @@ class Connection {
       },
       (err) => {
         if (err) {
-          console.log("Mongo Is Down");
+          console.log("🤯 Mongo Is Down");
         } else {
-          console.log(`Mongo Is Runnign On Port: ${Number(port)}`);
+          console.log(`🚀 Mongo Is Runnign On Port: ${Number(port)}`);
         }
       }
     );
@@ -84,9 +84,14 @@ class Connection {
    * @param {string} message
    */
   startServer(): void {
-    this.app.listen(process.env.PORT, () => {
-      console.log(`App Is Running On Port: `, process.env.PORT);
-      this.mongoConnection(process.env.MONGO_NAME, Number(process.env.MONGO_PORT), process.env.MONGO_HOST);
+    const { PORT, MONGO_NAME, MONGO_PORT, MONGO_HOST } = process.env;
+    this.app.listen(PORT, () => {
+      console.log(`🚀 App Is Running On Port: `, PORT);
+      this.mongoConnection(
+        MONGO_NAME,
+        Number(MONGO_PORT),
+        MONGO_HOST
+      );
     });
   };
 
