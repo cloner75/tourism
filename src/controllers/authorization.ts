@@ -70,25 +70,6 @@ class Authorization {
       return res.status(500).send(err.message);
     }
   }
-
-  /**
-   * TODO Find One Controller
-   * @param {request} req
-   * @param {response} res
-   */
-  async find(req: Request, res: Response) {
-    try {
-      const checkUser: any = await UserModel.findOne({ _id: req.params.id });
-      if (!checkUser) {
-        return res.status(404).send({ success: false, message: 'not found' });
-      }
-      delete checkUser.password;
-      return res.status(200).send({ success: true, data: checkUser });
-    } catch (err) {
-      console.log('signUp', err.message);
-      return res.status(500).send(err.message);
-    }
-  }
 }
 
 export default Authorization;
