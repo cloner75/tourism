@@ -48,6 +48,7 @@ class Connection {
       next();
     });
   };
+
   /**
    *  TODO Connection Mongo
    * @param {number} port
