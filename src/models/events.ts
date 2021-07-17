@@ -3,7 +3,7 @@ import { Schema, model } from "mongoose";
 import * as paginate from "mongoose-paginate";
 import * as timestamp from "mongoose-timestamp";
 
-const userSchema = new Schema(
+const eventSchema = new Schema(
   {
     email: { type: String, required: true },
     password: { type: String, required: true },
@@ -17,10 +17,10 @@ const userSchema = new Schema(
   { versionKey: false }
 );
 
-userSchema.plugin(paginate);
-userSchema.plugin(timestamp);
+eventSchema.plugin(paginate);
+eventSchema.plugin(timestamp);
 
-const UserModel = model("users", userSchema);
-UserModel.createIndexes();
+const EventsModel = model("events", eventSchema);
+EventsModel.createIndexes();
 
-export default UserModel;
+export default EventsModel;
