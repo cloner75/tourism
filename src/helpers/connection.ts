@@ -98,6 +98,19 @@ class Connection {
 
   Router(): void {
     this.app.use('/authorization', Router.authorization);
+    this.app.use('/about', Router.about);
+    this.app.use('/contract', Router.contract);
+    this.app.use('/donators', Router.donators);
+    this.app.use('/employee', Router.employee);
+    this.app.use('/events', Router.events);
+    this.app.use('/history', Router.history);
+    this.app.use('/news', Router.news);
+    this.app.use('/partners', Router.partners);
+    this.app.use('/sponsers', Router.sponsers);
+    this.app.use('/upload', Router.upload);
+    this.app.use('/user', Router.user);
+    this.app.use('/vision', Router.vision);
+    this.app.use('/youtube', Router.youtube);
   }
 }
 export default Connection;
