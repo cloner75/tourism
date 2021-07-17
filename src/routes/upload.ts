@@ -9,20 +9,14 @@ import uploadController from "../controllers/upload";
 // Consts
 const router = Router();
 enum Names {
-  CREATE = '/create',
-  FIND_ONE = '/findOne/:id',
-  FIND = '/find',
-  UPDATE = '/update/:id',
-  REMOVE = '/remove/:id',
+  UPLOAD = '/upload',
+  SHOW = '/show/:id'
 }
 const upload: any = new uploadController();
 
 router
-  .post(Names.CREATE, upload.create)
-  .get(Names.FIND, upload.find)
-  .get(Names.FIND_ONE, upload.findOne)
-  .put(Names.UPDATE, upload.update)
-  .delete(Names.REMOVE, upload.remove);
+  .post(Names.UPLOAD, upload.upload)
+  .get(Names.SHOW, upload.show);
 
 export default router;
 
