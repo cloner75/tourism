@@ -3,7 +3,7 @@ import { Schema, model } from "mongoose";
 import * as paginate from "mongoose-paginate";
 import * as timestamp from "mongoose-timestamp";
 
-const userSchema = new Schema(
+const contractSchema = new Schema(
   {
     email: { type: String, required: true },
     password: { type: String, required: true },
@@ -17,10 +17,10 @@ const userSchema = new Schema(
   { versionKey: false }
 );
 
-userSchema.plugin(paginate);
-userSchema.plugin(timestamp);
+contractSchema.plugin(paginate);
+contractSchema.plugin(timestamp);
 
-const UserModel = model("users", userSchema);
-UserModel.createIndexes();
+const ContractsModel = model("contracts", contractSchema);
+ContractsModel.createIndexes();
 
-export default UserModel;
+export default ContractsModel;
