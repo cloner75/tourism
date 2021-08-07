@@ -1,0 +1,178 @@
+* {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: url("./../images/header-bg.jpg");
+    padding-bottom: 30px;
+}
+
+header nav {
+    height: 55px;
+}
+
+header nav ul li a {
+    color: #fff !important;
+}
+
+header nav ul li a:hover {
+    color: #b60034 !important;
+}
+
+
+/* global */
+
+.bar {
+    margin: 40px 0;
+    height: 3px;
+    border-radius: 0 0 3px 3px;
+    background: #c70039;
+}
+
+.m-10 {
+    margin: 10px !important;
+}
+
+.p-10 {
+    padding: 10px !important;
+}
+
+
+/* youtube */
+
+.youtube-link {
+    margin: 10px auto;
+}
+
+#youtube-text {
+    text-align: left;
+    font-size: 2em;
+}
+
+
+/* who we are */
+
+.who-we-are {
+    margin: 50px 0;
+}
+
+.who-we-are img {
+    width: 100%;
+    border-radius: 7%;
+    border: 2px solid #c70039;
+}
+
+.who-item {
+    display: flex;
+    height: 225px;
+    margin-bottom: 30px;
+}
+
+.who-item .box {
+    background: rgb(28, 82, 48);
+    margin: 3px;
+    width: 49%;
+    height: 95%;
+}
+
+.who-item .box-1 {
+    border-radius: 50%;
+}
+
+.who-item .box-1:hover+.box-2 {
+    opacity: 1;
+}
+
+.who-item .box-2 {
+    opacity: 0;
+    background: rgb(112, 101, 101);
+}
+
+.who-item-content {
+    background: rgb(28, 82, 48);
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+
+/* gallery */
+
+.gallery {
+    margin: 30px 0;
+}
+
+.gallery .item {
+    padding: 10px 30px !important;
+}
+
+.gallery .item img {
+    width: 100%;
+}
+
+
+/* navbar */
+
+.navbar {
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+
+/* swiper */
+
+.slider-home {
+    height: 700px;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.mySwiper2 {
+    margin: 30px 0;
+}
+
+.swiper-item-bottom img {
+    width: 100px !important;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* background: #fff; */
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 95%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* media */
+
+@media only screen and (max-width: 600px) {
+    .slider-home {
+        height: 200px;
+    }
+    #ytplayer {
+        height: 100px;
+    }
+}
